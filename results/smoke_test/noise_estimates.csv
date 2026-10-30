@@ -1,0 +1,7 @@
+config_id,held,location,differences,noise_sigma,identifiable
+h12_f1_noise_combined_w0.05,140120_1.xlsx,1,0,,False
+h12_f1_noise_combined_w0.05,140120_1.xlsx,2,38,0.0007464736910005046,True
+h12_f1_noise_combined_w0.05,140120_1.xlsx,3,39,0.054562965250123205,True
+h12_f1_noise_combined_w0.05,140120_1.xlsx,4,2,0.005518928529426379,False
+h12_f1_noise_combined_w0.05,140120_1.xlsx,5,28,0.07823387078568926,True
+h12_f1_noise_combined_w0.05,140120_1.xlsx,6,49,0.31886574157088116,True

@@ -1,0 +1,12 @@
+{
+  "experiment": "140207_1.xlsx",
+  "history": 12,
+  "horizon": 1,
+  "forecast_origins": 106,
+  "predictions_compared": 636,
+  "tolerance": 1e-05,
+  "maximum_absolute_difference": 7.152557373046875e-07,
+  "mean_absolute_difference": 4.248646726398348e-08,
+  "failed_predictions": 0,
+  "status": "PASS"
+}

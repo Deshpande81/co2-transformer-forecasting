@@ -1,0 +1,9 @@
+experiment,partition,rows,duration_min,median_interval_s,min_interval_s,max_interval_s,duplicate_timestamps,invalid_labels,missing_CO2,excluded_non_time_rows
+140120_1,development,117,83.53333333333333,43.0,43.0,44.0,0,0,0,1
+140206_1,development,50,35.28333333333333,43.0,43.0,44.0,0,0,0,1
+140207_1,reserved test,118,84.23333333333333,43.0,43.0,44.0,0,0,0,1
+140207_2,development,50,35.28333333333333,43.0,43.0,44.0,0,0,0,1
+140214_1,development,67,47.516666666666666,43.0,43.0,44.0,0,0,0,1
+140214_2,development,50,35.266666666666666,43.0,43.0,44.0,0,0,0,1
+140227_1,development,218,156.23333333333332,43.0,43.0,44.0,0,0,0,1
+140313_1,development,228,163.45,43.0,43.0,44.0,0,0,0,1

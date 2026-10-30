@@ -1,0 +1,2 @@
+config_id,history,horizon,loss,mode,weight,l1_proxy_weight,seed,lr,selection_metric,macro_observed_mae,macro_observed_rmse
+h12_f1_noise_combined_w0.05,12,1,noise,combined,0.05,0.05,42,0.001,mae,1.0359046093188227,1.0715262680314481

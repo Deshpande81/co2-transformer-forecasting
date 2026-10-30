@@ -1,0 +1,7 @@
+config_id,outer_fold,inner_fold,best_epoch,best_score,stopped_epoch,stop_reason
+h12_f1_noise_combined_w0.05,140120_1.xlsx,140206_1.xlsx,3,0.7261189945042134,3,max_epochs
+h12_f1_noise_combined_w0.05,140120_1.xlsx,140207_2.xlsx,3,0.11768913315609097,3,max_epochs
+h12_f1_noise_combined_w0.05,140120_1.xlsx,140214_1.xlsx,3,0.2906832877546549,3,max_epochs
+h12_f1_noise_combined_w0.05,140120_1.xlsx,140214_2.xlsx,3,0.2839652566239238,3,max_epochs
+h12_f1_noise_combined_w0.05,140120_1.xlsx,140227_1.xlsx,2,0.554062251187861,3,max_epochs
+h12_f1_noise_combined_w0.05,140120_1.xlsx,140313_1.xlsx,1,0.8898822534829378,3,patience

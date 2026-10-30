@@ -1,0 +1,21 @@
+{
+  "history": 12,
+  "horizon": 1,
+  "loss": "noise",
+  "mode": "combined",
+  "weight": 0.05,
+  "l1_proxy_weight": 0.05,
+  "seed": 42,
+  "lr": 0.001,
+  "epoch": 43,
+  "early_stopping": {
+    "max_epochs": 150,
+    "patience": 20,
+    "min_delta": 0.0001,
+    "epoch_rule": "rounded_median_of_inner_fold_best_epochs"
+  },
+  "selection_metric": "mae",
+  "retrospective_location_labels_assumed": true,
+  "first_target_row": 12,
+  "outer_cv_selection_bias_warning": "Configuration chosen using outer development CV; do not report selected outer CV score as unbiased."
+}

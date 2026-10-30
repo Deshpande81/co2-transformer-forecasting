@@ -1,0 +1,60 @@
+name: co2_transformer_final
+
+services:
+  db:
+    image: postgres:16
+    restart: unless-stopped
+
+    environment:
+      POSTGRES_USER: co2_user
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-co2_local_demo}
+      POSTGRES_DB: co2_forecasting
+
+    ports:
+      - "127.0.0.1:5432:5432"
+
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U co2_user -d co2_forecasting"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  init:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    command: ["python", "scripts/init_database.py"]
+
+    environment:
+      DATABASE_URL: postgresql+psycopg://co2_user:${POSTGRES_PASSWORD:-co2_local_demo}@db:5432/co2_forecasting
+
+    depends_on:
+      db:
+        condition: service_healthy
+
+    restart: "no"
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    restart: unless-stopped
+
+    depends_on:
+      init:
+        condition: service_completed_successfully
+
+    environment:
+      DATABASE_URL: postgresql+psycopg://co2_user:${POSTGRES_PASSWORD:-co2_local_demo}@db:5432/co2_forecasting
+      MODEL_CHECKPOINT: /app/results/final_test/final_model.pt
+
+    ports:
+      - "127.0.0.1:8000:8000"
+
+volumes:
+  postgres_data:
